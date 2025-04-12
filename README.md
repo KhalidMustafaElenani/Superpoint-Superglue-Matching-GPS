@@ -87,13 +87,13 @@ while cap.isOpened():
 cap.release()
 ```
 <p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
+  <img src="frame_25.png" alt="Coronavirus" width="500"/>
 </p>
 
 ## Display Sample Satellite Tile
 - Display a sample satellite tile for visualization:
 <p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
+  <img src="sat_map_00.png" alt="Coronavirus" width="500"/>
 </p>
 
 ## Image Preprocessing
@@ -105,13 +105,9 @@ def preprocess_image(image_path):
     image_normalized = image_resized / 255.0
     return image_normalized
 ```
-<p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
-</p>
-
 ## Display Satellite tiles and frames after preprocessing
 <p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
+  <img src="processed frame and tile.png" alt="Coronavirus" width="500"/>
 </p>
 
 ## Initialize SuperPoint Model (v1 Weights)
@@ -139,7 +135,7 @@ descriptors = outputs['descriptors'][0].cpu().numpy()
 ```
 ## Visualize Sample Keypoints
 <p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
+  <img src="keypoints frame and tile.png" alt="Coronavirus" width="500"/>
 </p>
 
 ## Initialize SuperGlue Model (Outdoor Weights)
@@ -172,6 +168,10 @@ with torch.no_grad():
     matches = superglue(data)
 
 ```
+<p align="center">
+  <img src="running sample.png" alt="Coronavirus" width="500"/>
+</p>
+
 ## Extract GPS from Satellite Tiles
 - Extract GPS coordinates associated with each satellite tile:
 ```bash
@@ -200,6 +200,11 @@ results = {
 with open('/content/drive/MyDrive/Results/matching_results.json', 'w') as f:
     json.dump(results, f, indent=4)
 ```
+
+<p align="center">
+  <img src="Result sample.png" alt="Coronavirus" width="500"/>
+</p>
+
 ## Conclusion
 This project demonstrates a pipeline for matching drone video frames with satellite tiles using SuperPoint and SuperGlue models. By extracting and matching features, it estimates the GPS coordinates of drone frames, facilitating geospatial analysis and navigation tasks.
 
