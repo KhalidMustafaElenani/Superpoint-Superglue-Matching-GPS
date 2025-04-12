@@ -108,7 +108,7 @@ def preprocess_image(image_path):
 ```
 ## Display Satellite Tiles and Frames After Preprocessing
 <p align="center">
-  <img src="processed frame and tile.png" width="500"/>
+  <img src="processed frame and tile.png" width="1000"/>
 </p>
 
 ## Initialize SuperPoint Model (v1 Weights)
@@ -136,7 +136,7 @@ descriptors = outputs['descriptors'][0].cpu().numpy()
 ```
 ## Visualize Sample Keypoints
 <p align="center">
-  <img src="keypoints frame and tile.png" width="500"/>
+  <img src="keypoints frame and tile.png" width="1000"/>
 </p>
 
 ## Initialize SuperGlue Model (Outdoor Weights)
