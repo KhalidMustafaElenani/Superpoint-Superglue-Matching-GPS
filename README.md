@@ -14,7 +14,7 @@
 ![Open_Issues](https://img.shields.io/badge/Issues-0-orange?style=plastic)
 
 <p align="center">
-  <img src="How it works.png" alt="Coronavirus" width="500"/>
+  <img src="How it works.png" width="500"/>
 </p>
 
 ## Introduction
@@ -24,9 +24,10 @@ This repository provides a comprehensive pipeline for **feature matching** using
 1. [Overview](#overview)  
 2. [Dependencies Installation](#dependencies-installation)  
 3. [Environment Setup](#environment-setup)  
-4. [Extract Frames from Drone Video](#extract-frames-from-drone-video)  
-6. [Display Sample Satellite Tile](#display-sample-satellite-tile)  
-7. [Image Preprocessing](#image-preprocessing)  
+4. [Extract Frames from Drone Video](#extract-frames-from-drone-video)
+5. [Display Sample Satellite Tile](#display-sample-satellite-tile)  
+6. [Image Preprocessing](#image-preprocessing)
+7. [Display Satellite Tiles and Frames After Preprocessing](#display-satellite-tiles-and-frames-after-preprocessing)
 8. [Initialize SuperPoint Model (v1 Weights)](#initialize-superpoint-model-v1-weights)  
 9. [Extract Keypoints and Descriptors](#extract-keypoints-and-descriptors)  
 10. [Visualize Sample Keypoints](#visualize-sample-keypoints)  
@@ -93,7 +94,7 @@ cap.release()
 ## Display Sample Satellite Tile
 - Display a sample satellite tile for visualization:
 <p align="center">
-  <img src="sat_map_00.png" alt="Coronavirus" width="500"/>
+  <img src="sat_map_00.png" width="500"/>
 </p>
 
 ## Image Preprocessing
@@ -105,9 +106,9 @@ def preprocess_image(image_path):
     image_normalized = image_resized / 255.0
     return image_normalized
 ```
-## Display Satellite tiles and frames after preprocessing
+## Display Satellite Tiles and Frames After Preprocessing
 <p align="center">
-  <img src="processed frame and tile.png" alt="Coronavirus" width="500"/>
+  <img src="processed frame and tile.png" width="500"/>
 </p>
 
 ## Initialize SuperPoint Model (v1 Weights)
@@ -135,7 +136,7 @@ descriptors = outputs['descriptors'][0].cpu().numpy()
 ```
 ## Visualize Sample Keypoints
 <p align="center">
-  <img src="keypoints frame and tile.png" alt="Coronavirus" width="500"/>
+  <img src="keypoints frame and tile.png" width="500"/>
 </p>
 
 ## Initialize SuperGlue Model (Outdoor Weights)
@@ -169,7 +170,7 @@ with torch.no_grad():
 
 ```
 <p align="center">
-  <img src="running sample.png" alt="Coronavirus" width="500"/>
+  <img src="running sample.png" width="500"/>
 </p>
 
 ## Extract GPS from Satellite Tiles
@@ -202,7 +203,7 @@ with open('/content/drive/MyDrive/Results/matching_results.json', 'w') as f:
 ```
 
 <p align="center">
-  <img src="Result sample.png" alt="Coronavirus" width="500"/>
+  <img src="Result sample.png" width="500"/>
 </p>
 
 ## Conclusion
